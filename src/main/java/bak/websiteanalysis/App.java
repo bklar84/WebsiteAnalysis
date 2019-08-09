@@ -1,6 +1,8 @@
 
 package bak.websiteanalysis;
 
+import java.io.IOException;
+
 /**
  * WebsiteAnalysis is a basic web scraper. It began as a project for a
  * university class. WebsiteAnalysis Examines a local website and derives
@@ -31,10 +33,11 @@ public class App {
 				+  "	URL1, 2, 3...: URLs to be translated to local directory structure.";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         if(args.length == 0) {
-        	throw new IOException(new App().getUsageMessage());
+        	new App();
+			throw new IOException(App.getUsageMessage());
         }
     }
 }
