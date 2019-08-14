@@ -84,5 +84,8 @@ public class App {
         	new App();
 			throw new IOException(App.getUsageMessage());
         }
+        else {
+        	Website userWebsite = new Website(args);
+        }
     }
 }

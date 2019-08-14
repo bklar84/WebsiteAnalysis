@@ -1,5 +1,14 @@
 package bak.websiteanalysis;
 
+import java.io.File;
+import java.io.IOException;
+
+import java.lang.Object;
+
+import java.net.URLEncoder;
+
+import org.apache.commons.validator.routines.UrlValidator;
+
 /**
  * Website will serve as the overarching class for the user's website. Through
  * this class, we will generate a list of pages that belong to the website as
@@ -77,11 +86,88 @@ package bak.websiteanalysis;
  * to the terminal.
  * 
  * @author Brian Klarman	b.klarman@gmail.com
- * @see
- * @see
- * @see
  */
-
 public class Website {
+	
+	//************** Data members **************
+	
+	static final String defaultConstructorException =
+			"No path specified. Can't use default constructor for object ";
+	
+	//************** Nested Classes **************
+	
+	/**
+	 * Verify that the file or directory is valid on the user's system.
+	 *
+	 * @param 	absolutePath 	The absolute path to the directory or file.
+	 * @return 	True/False Based on whether directory or file exists.
+	 */
+	public static Boolean verifyFileOrDirectory(String absolutePath) {
+		File f = new File(absolutePath);
+		
+		return f.exists();
+	}
+	
+	/**
+	 * Validates URL formats.
+	 * @see http://commons.apache.org/proper/commons-validator/apidocs/org/apache/commons/validator/routines/UrlValidator.html
+	 *
+	 * @param 	url 	a string containing a URL
+	 * @return 	True/False based on whether a URL is valid or not
+	 */
+	public static boolean validUrl(String url) {
+		String[] schemes = {"http","https"};
+		UrlValidator urlValidator = new UrlValidator(schemes);
+		
+		if (urlValidator.isValid(url)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Alerts the user that the path supplied is invalid.
+	 *
+	 * @param 	pathSupplied 	The absolute path to a file or directory
+	 * @return 
+	 */
+	public static String invalidPathMessage(String pathSupplied) {
+		return "The path: " + pathSupplied + " is invalid";
+	}
+	
+	/*
+	 * This grabs a stream of Path objects for each file in the directory
+	 recursively, maps those paths to their corresponding strings, and then
+	 uses a collector to gather them into a sorted list.
+	 */
+	private void findAllHtmlFiles() throws IOException {
+		
+	}
+		
+	//************** Constructors **************
+	
+	/**
+	 * Default constructor for Website. Website should always be created by taking
+	 * in one argument, the absolute path to the website
+	 * <p>
+	 * When invoking the default constructor, the program will throw an
+	 * IllegalArgumentException
+	 * <p>
+	 * Only the single argument constructor should be used.
+	 * 
+	 * @throws IllegalArgumentException because Website should always be created by
+	 *                                  taking in one argument
+	 */
+	public Website() {
+		throw new IllegalArgumentException(Website.defaultConstructorException
+				+ this.getClass().getSimpleName());
+	}
+	
+	public Website(String[] userPaths) {
+//		String validAbsolutePath = System.getProperty("user.dir");
+//		System.out.println(validAbsolutePath);
+	}
+
 
 }

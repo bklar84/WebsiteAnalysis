@@ -9,13 +9,56 @@ package bak.websiteanalysis;
  * this program, so it must be created programmatically.
  * 
  * @author Brian Klarman	b.klarman@gmail.com
- * 
- * @see jsonExport()
- * @see textExport()
- * @see excelExport()
- *
  */
 public class AnalysisOutput {
+	
+	//************** Data members **************
+	
+	//************** Nested Classes **************
+	
+	/**
+	 * Creates the output directory in root; ./output/<p>
+	 * The text, excel, and JSON files will be saved to this directory.
+	 *
+	 * @param dirPath output directory path defined in Website class.
+	 * @see outputFileName()
+	 */
+	private void createOutputDirectory(String dirPath) {
+		
+	}
+	
+	/**
+	 * All output file names must be prefixed with yyyyMMdd-hhmmss-summary.
+	 * This method should only be called once so that the three output files
+	 * have the same date and time.
+	 * <p>
+	 * The program generates a date time formatter that corresponds to user
+	 * requirements. The string literal "yyyMMdd-hhmmss" should not be changed
+	 * unless directed by the customer.
+	 * <p>
+	 * The string literal "-summary" must not be changed, as that is also a
+	 * customer requirement for the filename. "-summary" will appear as the
+	 * suffix to all output filenames.
+	 *
+	 * @return The file name of the file without the type extension
+	 *         (e.g. .json)
+	 */
+	public static String outputFileName() {
+		return null;
+		
+	}
+	
+	/**
+	 * Alerts the user that the output file has been successfully created.
+	 * <p>
+	 * This method will run after the Text, Excel, and JSON files are created.
+	 *
+	 * @param fileName The name of the file that was created.
+	 */
+	public void outputCreationSuccess(String fileName) {
+		
+	}
+	
 	/**
 	 * The JSON file should describe each page and resource in the site:
 	 * <ul>
@@ -101,4 +144,7 @@ public class AnalysisOutput {
 	public void createExcelHeader() {
 		
 	}
+	
+	//************** Constructors **************
+	
 }
