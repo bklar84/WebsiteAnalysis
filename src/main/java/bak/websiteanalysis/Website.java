@@ -100,7 +100,7 @@ public class Website {
 	 * Verify that the file or directory is valid on the user's system.
 	 *
 	 * @param 	absolutePath 	The absolute path to the directory or file.
-	 * @return 	True/False Based on whether directory or file exists.
+	 * @return 	True/False 		Based on whether directory or file exists.
 	 */
 	public static Boolean verifyFileOrDirectory(String absolutePath) {
 		File f = new File(absolutePath);
@@ -112,18 +112,14 @@ public class Website {
 	 * Validates URL formats.
 	 * @see http://commons.apache.org/proper/commons-validator/apidocs/org/apache/commons/validator/routines/UrlValidator.html
 	 *
-	 * @param 	url 	a string containing a URL
-	 * @return 	True/False based on whether a URL is valid or not
+	 * @param 	url 		a string containing a URL
+	 * @return 	True/False 	based on whether a URL is valid or not
 	 */
 	public static boolean validUrl(String url) {
 		String[] schemes = {"http","https"};
 		UrlValidator urlValidator = new UrlValidator(schemes);
 		
-		if (urlValidator.isValid(url)) {
-			return true;
-		} else {
-			return false;
-		}
+		return urlValidator.isValid(url);
 	}
 
 	/**
