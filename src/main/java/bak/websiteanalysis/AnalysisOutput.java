@@ -124,6 +124,17 @@ public class AnalysisOutput {
 	}
 	
 	/**
+	 * Converts a file size in bytes to MiB to two decimal places. MiB is
+	 * the Mebibyte which is 2^10 or 1,048,576 bytes.
+	 * This formatted file size will be used during the Text file creation.
+	 * 
+	 * @see textExport()
+	 */
+	private void convertFileSize() {
+		
+	}
+	
+	/**
 	 * The Excel document will consist of a single Excel workbook with a single
 	 * sheet named 'summary'. The document will take the form:<p>
 	 * Header row: Page, # Images, #CSS, Scripts, #Links (Intra-page),

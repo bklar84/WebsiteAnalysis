@@ -92,29 +92,4 @@ public class TestWebsite {
 	public void testFindAllHtmlFiles() {
 		
 	}
-	
-	@Test
-	public void testConstructorValidPath() {
-		
-	}
-	
-	@Test
-	public void testConstructorValidPathValidUrl() {
-		
-	}
-	
-	@Test
-	public void testConstructorValidPathInvalidUrl() {
-		
-	}
-	
-	@Test
-	public void testConstructorInvalidPath() {
-		
-	}
-	
-	@Test
-	public void testConstructorInvalidPathInvalidUrl() {
-		
-	}
 }
