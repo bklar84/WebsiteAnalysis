@@ -1,8 +1,10 @@
 package bak.websiteanalysis;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+import java.io.File;
 
 public class TestAnalysisOutput {
 	final String home = System.getProperty("user.dir");
@@ -11,17 +13,18 @@ public class TestAnalysisOutput {
 
 	@Test
 	public void testOutputDirectoryWasCreated() {
-		
+		File f = new File(outputLocation.toString());
+		assertTrue("output directory should exist", f.exists());
 	}
 	
 	@Test
 	public void testOutputFileNameConforms() {
-		
+
 	}
 	
 	@Test
-	public void testOutputFileCreationMessageExists() {
-		
+	public void testHasOutputFileCreationMessage() {
+
 	}
 	
 	@Test

@@ -5,4 +5,7 @@
 build
 /.classpath
 /.project
-/.settings
+/.gradle/
+/.settings/
+/bin/
+/output/*

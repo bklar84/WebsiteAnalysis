@@ -42,9 +42,9 @@ import org.apache.commons.validator.routines.UrlValidator;
  * The system must be able to extract the links (anchor tags) from a page.
  * Links should be classified as:
  * <ul>
- * <li>Intra-page</li>
- * <li>Inter-site</li>
- * <li>External</li>
+ * 	<li>Intra-page</li>
+ * 	<li>Inter-site</li>
+ * 	<li>External</li>
  * </ul>
  * An intra-page link is any link that references a part of the current
  * document.
@@ -73,12 +73,12 @@ import org.apache.commons.validator.routines.UrlValidator;
  * data and time the processing started. File names will take the form
  * YYYYMMDD-hhmmss-summary.{json,txt,xlsx} where:
  * <ul>
- * <li>YYYY: 4-digit year</li>
- * <li>MM: 2-digit month (zero padded) - 01 to 12</li>
- * <li>DD: 2-digit day (zero padded) - 01 to 31</li>
- * <li>hh: 2-digit hour (zero padded) - 00 to 23</li>
- * <li>mm: 2-digit minute (zero padded) - 00 to 59</li>
- * <li>ss: 2-digit second (zero padded) - oo to 59</li>
+ * 	<li>YYYY: 4-digit year</li>
+ * 	<li>MM: 2-digit month (zero padded) - 01 to 12</li>
+ * 	<li>DD: 2-digit day (zero padded) - 01 to 31</li>
+ * 	<li>hh: 2-digit hour (zero padded) - 00 to 23</li>
+ * 	<li>mm: 2-digit minute (zero padded) - 00 to 59</li>
+ * 	<li>ss: 2-digit second (zero padded) - oo to 59</li>
  * </ul>
  * The names of all output files must be written (one per line) to standard
  * out (i.e., the terminal). With the exception of error messages (written to
