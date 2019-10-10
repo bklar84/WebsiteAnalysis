@@ -43,13 +43,13 @@ systems. The above systems will need a Java JRE installed to execute the program
 ## Design Constraints
 This program is limited to offline use only and will not access any online or live webpages.
 
-The user input is limited to only a command-line interface with the only input be the path to local web
+The user input is limited to only a command-line interface with the only input being the path to local web
 pages and any URLs that are needed for the analysis.
 
 The program output is limited to console or terminal window messages, JSON file, text file, and Excel file
 outputs.
 
-The WebsiteAnalysis system will be dependent on that the user will have a working Windows,
+The WebsiteAnalysis system will be dependent upon the user having a working Windows,
 Linux, or OS/X operating system installed on their client machine, along with an installed Java JRE.
 It will also be assumed that the user will have programs installed on their host machine to read and
 utilize the output file format of JSON, Text, and Excel files.
