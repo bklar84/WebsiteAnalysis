@@ -1,5 +1,9 @@
 package bak.websiteanalysis;
 
+import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * AnalysisOutput is responsible for outputting the data parsed from each
  * file containing html tags. Three files will be created: JSON (.json),
@@ -24,7 +28,8 @@ public class AnalysisOutput {
 	 * @see outputFileName()
 	 */
 	private void createOutputDirectory(String dirPath) {
-		
+		File directory = new File(dirPath);
+		directory.mkdirs();
 	}
 	
 	/**
@@ -43,8 +48,13 @@ public class AnalysisOutput {
 	 * @return The file name of the file without the type extension
 	 *         (e.g. .json)
 	 */
-	public static String outputFileName() {
-		return null;
+	private static String outputFileName() {
+		final String prefix = "yyyyMMdd-hhmmss";
+		final String suffix = "-summary";
+		final DateTimeFormatter dtf = DateTimeFormatter.ofPattern(prefix);
+		final LocalDateTime ldt = LocalDateTime.now();
+		
+		return (dtf.format(ldt) + suffix);
 		
 	}
 	

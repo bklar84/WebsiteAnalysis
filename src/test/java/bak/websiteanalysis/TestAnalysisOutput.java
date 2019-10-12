@@ -17,10 +17,10 @@ public class TestAnalysisOutput {
 		assertTrue("output directory should exist", f.exists());
 	}
 	
-	@Test
-	public void testOutputFileNameConforms() {
-
-	}
+//	@Test
+//	public void testOutputFileNameConforms() {
+//		
+//	}
 	
 	@Test
 	public void testHasOutputFileCreationMessage() {
