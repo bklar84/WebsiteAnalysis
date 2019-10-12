@@ -201,9 +201,18 @@ public class Website {
 				+ this.getClass().getSimpleName());
 	}
 	
+	/**
+	 * The only valid constructor for this object. A website must at least
+	 * have a path and can contain optional URLs that need to be resolved
+	 * 
+	 * @param userPaths array containing the base path and optional URLs
+	 * 			[0] = absolute path to website
+	 * 			[1..n] = optional URLs
+	 */
 	public Website(String[] userPaths) {
 //		String validAbsolutePath = System.getProperty("user.dir");
 //		System.out.println(validAbsolutePath);
+		
 	}
 
 
