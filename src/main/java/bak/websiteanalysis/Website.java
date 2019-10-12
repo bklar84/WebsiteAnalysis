@@ -6,6 +6,17 @@ import java.io.IOException;
 import java.lang.Object;
 
 import java.net.URLEncoder;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 
 import org.apache.commons.validator.routines.UrlValidator;
 
@@ -94,6 +105,8 @@ public class Website {
 	static final String defaultConstructorException =
 			"No path specified. Can't use default constructor for object ";
 	
+	private ArrayList<Page> htmlPages = new ArrayList<Page>();
+	
 	//************** Nested Classes **************
 	
 	/**
@@ -121,7 +134,7 @@ public class Website {
 		
 		return urlValidator.isValid(url);
 	}
-
+	
 	/**
 	 * Alerts the user that the path supplied is invalid.
 	 *
@@ -134,11 +147,39 @@ public class Website {
 	
 	/*
 	 * This grabs a stream of Path objects for each file in the directory
-	 recursively, maps those paths to their corresponding strings, and then
-	 uses a collector to gather them into a sorted list.
+	 * recursively, maps those paths to their corresponding strings, and then
+	 * uses a collector to gather them into a sorted list.
 	 */
-	private void findAllHtmlFiles() throws IOException {
-		
+	private void findAllHtmlFiles(String rootDirectory, String[] urls) throws IOException {
+//		Stream<Path> paths =
+//				Files.walk(Paths.get(rootDirectory)).filter(Files::isRegularFile);
+//		List<String> fileIndex = 
+//				paths.map(path -> path.toString()).collect(Collectors.toList());
+//		File tempFile;
+//
+//		for (String f : fileIndex) {
+//
+//			try{
+//				tempFile = new File(f);
+//
+//				if (FileUtils.readFileToString
+//						(tempFile, "UTF-8").contains("<html>")) {
+//					if (htmlPages.size() == 1000) {
+//						System.out.println("Page limit of 1000 exceeded. Only first 1000 will be processed");
+//						break;
+//					}
+//					Page page = new Page(f, rootDirectory, urls);
+//					htmlPages.add(page);
+//					// Not using asset tracker. Modify to fit current system
+//					assetTracker.addAssetTracker(page.getAssetsInfo());
+//					page.getAssetsInfo().getImageUsage().clear();
+//				}
+//			}
+//			catch (Exception e){
+//
+//			}
+//		}
+//		Collections.sort(htmlPages, Page.compareByPath);
 	}
 		
 	//************** Constructors **************

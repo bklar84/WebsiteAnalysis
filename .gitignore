@@ -6,6 +6,6 @@ build
 /.classpath
 /.project
 /.gradle/
-/.settings/
+/.settings/*
 /bin/
 /output/*

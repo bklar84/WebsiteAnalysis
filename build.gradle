@@ -19,6 +19,11 @@ dependencies {
     implementation 'com.google.guava:guava:27.0.1-jre'
     
     compile group: 'commons-validator', name: 'commons-validator', version: '1.6'
+    compile group: 'org.apache.poi', name: 'poi', version: '3.17'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+    compile group: 'com.cedarsoftware', name: 'json-io', version: '4.10.1'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+
 
     testImplementation(
             'junit:junit:4.12',
