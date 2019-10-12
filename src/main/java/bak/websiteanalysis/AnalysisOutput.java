@@ -54,9 +54,12 @@ public class AnalysisOutput {
 	 * This method will run after the Text, Excel, and JSON files are created.
 	 *
 	 * @param fileName The name of the file that was created.
+	 * @return a message to the user that the file has been created.
 	 */
-	public void outputCreationSuccess(String fileName) {
-		
+	public static String outputCreationSuccess(String fileName) {
+		String creationMessage = String.format("The file %s has been created"
+				, fileName );
+		return creationMessage;
 	}
 	
 	/**
@@ -130,8 +133,8 @@ public class AnalysisOutput {
 	 * 
 	 * @see textExport()
 	 */
-	private void convertFileSize() {
-		
+	private double convertFileSize(String fileName) {
+		return 0.00;
 	}
 	
 	/**

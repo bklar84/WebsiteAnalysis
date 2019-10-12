@@ -24,7 +24,8 @@ public class TestAnalysisOutput {
 	
 	@Test
 	public void testHasOutputFileCreationMessage() {
-
+		assertNotNull("app should have a usage message",
+				AnalysisOutput.outputCreationSuccess("MessageTest"));
 	}
 	
 	@Test
