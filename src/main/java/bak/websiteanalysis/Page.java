@@ -1,5 +1,6 @@
 package bak.websiteanalysis;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 
 /**
@@ -14,23 +15,27 @@ import java.util.Comparator;
 public class Page {
 
 	//************** Data members **************
-	
+	private String websitePath;
+	private String relativePath;
+	private int nbrLocalImages;
+	private int nbrExternalImages;
+	private int nbrLocalScripts;
+	private int nbrExternalScripts;
+	private int nbrLocalCss;
+	private int nbrExternalCss;
+	private int nbrIntraLinks;
+	private int nbrInterLinks;
+	private int nbrExternalLinks;
+	private double sizeOfImages;
+	private ArrayList<String> imagePaths = new ArrayList<String>();
+	private ArrayList<String> scriptPaths = new ArrayList<String>();
+	private ArrayList<String> cssPaths = new ArrayList<String>();
 	// Not going to implement a getter for page path.
 //	public static final Comparator<Page> compareByPath = (Page lhs, Page rhs) -> lhs.getPagePath()
 //			.compareTo(rhs.getPagePath());
 	
 	//************** Nested Classes **************
-	/**
-	 * Takes the command-line arguments supplied by user at runtime and places
-	 * them in their own container. These URLs will have to be checked when
-	 * determining if static content is internal or external. If the link to a
-	 * piece of static content begins with a URL found in the container, it
-	 * will be classified as internal. If the link contains a URL not in the
-	 * container, it will be classified as external.
-	 */
-	private void createUrlList(String[] userArgs) {
-		
-	}
+	
 	
 	//************** Constructors **************
 	/**

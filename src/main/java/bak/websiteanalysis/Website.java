@@ -106,6 +106,7 @@ public class Website {
 			"No path specified. Can't use default constructor for object ";
 	
 	private ArrayList<Page> htmlPages = new ArrayList<Page>();
+	private ArrayList<String> urlList = new ArrayList<String>();
 	
 	//************** Nested Classes **************
 	
@@ -180,6 +181,22 @@ public class Website {
 //			}
 //		}
 //		Collections.sort(htmlPages, Page.compareByPath);
+	}
+	
+	/**
+	 * Takes the command-line arguments supplied by user at runtime and places
+	 * them in their own container. These URLs will have to be checked when
+	 * determining if static content is internal or external. If the link to a
+	 * piece of static content begins with a URL found in the container, it
+	 * will be classified as internal. If the link contains a URL not in the
+	 * container, it will be classified as external.
+	 * 
+	 * @param userArgs	The URLs defined by user in the CLI. These are the
+	 * 					optional parameters supplied and represent args[1..n]
+	 * 					from main.
+	 */
+	private void createUrlList(String[] userArgs) {
+		
 	}
 		
 	//************** Constructors **************
