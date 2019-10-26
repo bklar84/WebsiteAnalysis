@@ -50,5 +50,21 @@ public class Page {
 		throw new IllegalArgumentException(Website.defaultConstructorException
 				+ this.getClass().getSimpleName());
 	}
+	
+	/**
+	 * The only constructor that will be used for Page. This constructor will
+	 * use JSoup to extract elements from the linked file containing HTML and
+	 * populate the data members.
+	 * <p>
+	 * The path should already be confirmed to be an HTML file before being
+	 * passed to this constructor.
+	 *
+	 * @param	pagePaths	String array containing the absolute path as well
+	 * 						as optional URLs.
+	 */
+	public Page(String[] pagePaths) {
+		websitePath = pagePaths[0];
+		
+	}
 
 }
